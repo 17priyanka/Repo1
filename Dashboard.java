@@ -32,12 +32,12 @@ public class Dashboard extends HttpServlet {
         
             PrintWriter out = response.getWriter();
             out.println("<html><body>");
-            
             String userId = request.getParameter("userid");
-            if (userId == null ) {
-                out.println("No UserId was found in the URL.<br>");
+            if (userId == null) {
+                out.println("No UserId was found in hidden form field.<br>");
             } else {
-                out.println("UserId obtained from URL Rewriting:" + userId + "<br>");
+                out.println("UserId found in hidden form field: " + userId + "<br>");
+                
             }
             out.println("</body></html>");
 
@@ -52,3 +52,4 @@ public class Dashboard extends HttpServlet {
         }
 
 }
+
